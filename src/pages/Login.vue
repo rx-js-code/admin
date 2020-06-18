@@ -1,7 +1,7 @@
 <template>
   <div class="login-div">
     <el-card class="box-card">
-      <h4>天团餐饮管理系统</h4>
+      <h4>地团餐饮管理系统</h4>
       <el-input v-model="acc" placeholder="请输入管理员账号"></el-input>
       <el-input class="pwd-input" v-model="pwd" placeholder="请输入密码"></el-input>
       <p v-show="error_text">用户名或密码错误</p>
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { API_LOGIN } from "../api/apis";
+import { API_LOGIN } from "../api/apis"
 
 export default {
   data() {

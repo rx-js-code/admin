@@ -1,6 +1,21 @@
 import axios from 'axios'
-// 设置服务器IP地址
-axios.defaults.baseURL = 'http://localhost:5000'
+
+//服务器IP地址
+export const SERVER_IP = 'http://localhost:5000'
+//服务器上传图片API地址
+export const SERVER_UPLOAD = SERVER_IP + '/shop/upload'
+
+// ---------------------------   获取服务器各类图片地址 ------------------------------------//
+//服务器店铺图片地址
+export const SERVER_SHOP_IMG = SERVER_IP + '/upload/shop/'
+// //服务器商品图片地址
+// export const SERVER_GOODS_IMG =  SERVER_IP + '/shop/upload'
+// //服务器用户头像图片地址
+// export const SERVER_USERS_IMG =  SERVER_IP + '/shop/upload'
+
+axios.defaults.baseURL = SERVER_IP
+
+
 
 
 //API： 登录
@@ -37,6 +52,15 @@ export const API_GET_PERSONAL = (id) => axios.get("/users/accountinfo", { params
 
 //获取首页表格数据
 export const API_GET_ORDER_TOTAL = () => axios.get("/order/totaldata")
+
+//获取店铺信息
+export const API_GET_SHOPINFO = () => axios.get("/shop/info")
+
+//店铺内容修改
+export const API_SHOP_EDIT = (params) => axios.post("/shop/edit", params)
+
+
+
 
 
 
